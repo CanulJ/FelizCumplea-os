@@ -22,6 +22,11 @@
   font-size: 24px;
   color: #f3f3f3;
   user-select: none;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 
@@ -123,4 +128,56 @@ h1 {
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .title-container h2 {
+    font-size: 20px;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+
+
+  h1 {
+    font-size: 2rem;
+    margin: 40px auto 20px;
+    padding: 0 10px;
+  }
+
+  .heart-container {
+    gap: 100px 30px;
+    padding: 30px 10px;
+  }
+
+  .heart {
+    width: 40px;
+    height: 40px;
+  }
+
+  .heart::before,
+  .heart::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .heart::before {
+    top: -20px;
+  }
+
+  .heart::after {
+    left: 20px;
+  }
+
+  .modal-content {
+    max-width: 90%;
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 20px;
+    top: 5px;
+    right: 10px;
+  }
 }
