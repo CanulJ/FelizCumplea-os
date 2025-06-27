@@ -153,3 +153,61 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .contenedor-horizontal {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .card {
+  width: 90vw;         /* ocupa el 90% del ancho de pantalla */
+  min-height: 350px;   /* aumenta la altura mínima */
+  padding: 20px;       /* un poquito de espacio interno */
+}
+
+.card__image {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.card__title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card__description {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+  .cake {
+    width: 160px;
+    height: 160px;
+  }
+
+  .bottom-layer,
+  .middle-layer,
+  .top-layer {
+    height: 50px;
+  }
+
+  .candle {
+    height: 30px;
+  }
+
+  .flame {
+    width: 10px;
+    height: 10px;
+  }
+
+  .spotify-embed iframe {
+    width: 100%;
+    max-width: 300px;
+  }
+}
