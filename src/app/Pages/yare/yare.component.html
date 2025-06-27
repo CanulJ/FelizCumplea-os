@@ -1,0 +1,32 @@
+<!-- Este div es solo el fondo -->
+<div class="fondo"></div>
+
+<!-- Aquí va tu contenido real -->
+<h1>💖 Feliz cumpleaños para el amor de mi vida 💖</h1>
+
+<app-mensaje></app-mensaje>
+
+<div class="title-container">
+  <h2>Los meses que pasamos juntos</h2>
+</div>
+
+<div class="heart-container">
+  <div
+    class="heart"
+    *ngFor="let month of months"
+    (click)="openMessage(month)"
+    [title]="month">
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>{{ selectedMonth }}</h2>
+    <p>{{ selectedMessage }}</p>
+  </div>
+</div>
+
+<app-cartas></app-cartas>
+

@@ -1,0 +1,89 @@
+.title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-container h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #f3f3f3;
+  user-select: none;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 150px;
+  height: 220px;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 12px #000;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  flex-direction: column; /* IMPORTANTE */
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.book-content {
+  z-index: 1;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* aquí la magia */
+  padding: 10px 10px 10px 25px; /* mueve el texto a la derecha */
+  text-align: left;
+}
+
+
+.book-content p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+}
+
+.cover {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.7); /* un poco transparente */
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s;
+  transform-origin: left;
+  backface-visibility: hidden;
+}
+
+.book:hover .cover {
+  transform: rotateY(-80deg);
+}
+
+.book-content p {
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #222;
+}
